@@ -1,0 +1,28 @@
+[
+    {
+        "name": "The Do",
+      "genre":"Indie POP",
+      "introduction": "Featured in RAW",
+      "songs": [
+            {
+        "name": "Despair, hangover and extasy",
+        "img":"https://i.scdn.co/image/0d94f0d43132aa9762a9958e4eba50c049d956ce"
+            }
+        ]
+    },
+    {
+      "name":"Metronomy",
+      "genre":"Indie POP",
+      "introduction": "",
+      "songs": [
+            {
+        "name":"Corine",
+        "img": "https://images-na.ssl-images-amazon.com/images/I/51a%2BA-hJVdL._SL1200_.jpg"
+            },
+            {
+        "name":"The Look",
+        "img": "https://images-na.ssl-images-amazon.com/images/I/51a%2BA-hJVdL._SL1200_.jpg"
+            }
+        ]
+    }
+]
