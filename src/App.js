@@ -1,8 +1,6 @@
 import React,{ useState }  from 'react';
-import GroupCard from './components/GroupCard';
+import {GroupCard, RecomendationForm, RecomendationList} from './components';
 import groups from './data/groups.json';
-import RecomendationForm from './components/RecomendationForm';
-import RecomendationList from './components/RecomendationList';
 
 
 const renderGroups = (groupList) =>{

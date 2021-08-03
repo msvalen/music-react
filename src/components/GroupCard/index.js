@@ -1,5 +1,5 @@
 import React from 'react';
-import SongsCard from './SongsCard';
+import {SongCard} from '..';
 
 const  GroupCard = (data) => {
     return (
@@ -8,7 +8,7 @@ const  GroupCard = (data) => {
           <h3>{data.genre}</h3>
           <p>{data.introduction}</p>
           <h4>My favorite songs of this group:</h4>
-          { <SongsCard songs = {data.songs}/> }
+          { <SongCard songs = {data.songs}/> }
         </div>
     );    
 }
