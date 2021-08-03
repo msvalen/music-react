@@ -17,7 +17,8 @@ const RecomendationForm = ({updateList}) => {
     function handleFormSumbit(e){
         e.preventDefault();
         setGroups(prev => [...prev, groupInput]);
-        setGroupInput("");
+        setGroupInput("");        
+        localStorage.setItem('recomendations',groups);
         updateList(groups);
     }
 
