@@ -6,7 +6,7 @@ import RecomendationList from './components/RecomendationList';
 
 
 const renderGroups = (groupList) =>{
-  return groupList.map(group => <GroupCard name= {group.name} genre={group.genre} introduction = {group.introduction} songs = {group.songs}/>)
+  return groupList.map((group,i) => <GroupCard key={i} name= {group.name} genre={group.genre} introduction = {group.introduction} songs = {group.songs}/>)
 }
 
 
