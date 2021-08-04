@@ -10,17 +10,15 @@ const renderGroups = (groupList) =>{
 
 function App() {
   const [recomendations,setRecomendations] =useState();
-  function updateRecomendationList (recomendationList) {
-    setRecomendations(recomendationList);
-  }
+  
   return (
     <main>
       <Jokes/>
       <h1>Personal Playlist</h1>
       {renderGroups(groups)}
 
-      <RecomendationForm updateList={updateRecomendationList}/>
-      {/* {recomendations && <RecomendationList recomendations = {recomendations}/>} */}
+      <RecomendationForm updateList={setRecomendations}/>
+      {recomendations && <RecomendationList recomendations = {recomendations}/>}
     </main>
   );
 }

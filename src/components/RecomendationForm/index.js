@@ -1,30 +1,31 @@
 
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 //import data from '../data/recomendations.json';
 
-const badwords = ['bad','dog'];
+const badwords = ['Ed Sheeran', 'Selena Gomez', 'Justin  Bieber'];
 
 const data=[
-    "MGMT",
-    "Kerokero Bonito"
+    'Justin Bieber'
  ]
 
 const RecomendationForm = ({updateList}) => {
-  const [groups, setGroups] = useState(data);  
-  const [groupInput, setGroupInput] = useState('');
+    const [groups, setGroups] = useState(data);  
+    const [groupInput, setGroupInput] = useState('');
+
+    useEffect(() => {
+        updateList(groups);
+      }, [groups])
 
     function handleFormSumbit(e){
         e.preventDefault();
         setGroups(prev => [...prev, groupInput]);
         setGroupInput("");        
         localStorage.setItem('recomendations',groups);
-        updateList(groups);
     }
 
     function handleInput(e){
-        if(!badwords.includes(e.target.value)) 
-        {setGroupInput(e.target.value);}
+        if(badwords.join(' ').toLocaleLowerCase().includes((e.target.value).toLocaleLowerCase())) setGroupInput(e.target.value);
     }
 
     return (
