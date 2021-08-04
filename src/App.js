@@ -1,5 +1,5 @@
 import React,{ useState }  from 'react';
-import {GroupCard, RecomendationForm, RecomendationList} from './components';
+import {GroupCard, RecomendationForm, RecomendationList, Jokes} from './components';
 import groups from './data/groups.json';
 
 
@@ -15,6 +15,7 @@ function App() {
   }
   return (
     <main>
+      <Jokes/>
       <h1>Personal Playlist</h1>
       {renderGroups(groups)}
 
