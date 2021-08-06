@@ -1,24 +1,30 @@
 import React,{ useState }  from 'react';
 import {GroupCard, RecomendationForm, RecomendationList, Jokes} from './components';
-import groups from './data/groups.json';
+
+import { Header, Nav, Footer } from './layout';
+import { Home, Music, Other, Error} from './pages'
 
 
-const renderGroups = (groupList) =>{
+import {  Switch, Route } from 'react-router-dom';
+
+/* const renderGroups = (groupList) =>{
   return groupList.map((group,i) => <GroupCard key={i} name= {group.name} genre={group.genre} introduction = {group.introduction} songs = {group.songs}/>)
 }
+ */
 
-
-function App() {
-  const [recomendations,setRecomendations] =useState();
-  
+function App() {  
   return (
     <main>
-      <Jokes/>
-      <h1>Personal Playlist</h1>
-      {renderGroups(groups)}
-
-      <RecomendationForm updateList={setRecomendations}/>
-      {recomendations && <RecomendationList recomendations = {recomendations}/>}
+      <Header />
+      <Nav/>
+      <Switch>
+        <Route exact path="/"><Home /></Route>
+        <Route path="/music"><Music/></Route>
+        <Route path="/other"><Other /></Route>
+        <Route path="/error"><Error /></Route>
+      </Switch>
+      
+      <Footer/>
     </main>
   );
 }

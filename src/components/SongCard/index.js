@@ -1,4 +1,6 @@
 import React from 'react';
+import './style.css';
+
 
 import {LikeCounter} from  '..';
 
@@ -16,7 +18,7 @@ const SongsCard = (data) => {
             </tr>
           </thead>
           <tbody>
-            { renderRows(data.songs) }
+         { renderRows(data.songs) }
           </tbody>
         </table>
       );   
