@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {GroupCard } from '../../components';
 import groups from '../../data/groups.json';
 
-const renderGroups = (groupList) =>{
-    return groupList.map((group,i) => <GroupCard key={i} name= {group.name} genre={group.genre} introduction = {group.introduction} songs = {group.songs}/>)
-  }
+
   
 export default () => {
-    return renderGroups(groups) 
+    const renderGroups = (groupList) =>{
+        return (groupList.map((x,i) => <GroupCard key={i} name= {x.name} genre={x.genre} introduction = {x.introduction} albums = {x.albums}/>));
+      }   
+
+    return renderGroups(groups);
 }
