@@ -1,20 +1,23 @@
 import React,{ useState }  from 'react';
-import {GroupCard, RecomendationForm, RecomendationList, Jokes} from './components';
 
 import { Header, Nav, Footer } from './layout';
 import { Home, Music, Other, Error} from './pages'
 
-
+import { useTheme } from './contexts/Theme';
 import {  Switch, Route } from 'react-router-dom';
+import ThemeChanger from './components/ThemeChanger';
 
 /* const renderGroups = (groupList) =>{
   return groupList.map((group,i) => <GroupCard key={i} name= {group.name} genre={group.genre} introduction = {group.introduction} songs = {group.songs}/>)
 }
  */
 
-function App() {  
+function App() {
+  const theme = useTheme();
+  
   return (
-    <main>
+    <main className={theme.current.color}>
+      <ThemeChanger/>
       <Header />
       <Nav/>
       <Switch>
