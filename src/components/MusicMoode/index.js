@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import lorepicsum from '../../connections/lorepicsum';
 import quotesGen from '../../connections/quotesGen';
-import axios from 'axios';
 
 
 export default ({toggle}) => {
@@ -10,15 +9,14 @@ export default ({toggle}) => {
     const [redo, setRedo] = useState(false);
 
     useEffect(() => {
-        function getImage() {
-            setImage(lorepicsum());           
-        }
         function getFrase(){
             quotesGen()
-            .then(data => setFrase(data))
+            .then(data => {
+                setImage(lorepicsum());
+                setFrase(data)                
+                })
             .catch(e=>console.warm(e));            
-        }
-        getImage();
+        }        
         getFrase();
     },[redo])
 

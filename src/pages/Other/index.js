@@ -11,11 +11,10 @@ export default () => {
     }
 
     return (
-        <>
-            
+        <>            
             {  albumGenerator ?             
              <MusicMoode toggle={toggle}/>:
-             <span onClick={toggle}>Get Album</span> }
+             <span onClick={toggle} style={{cursor: "pointer"}}>Get Album</span> }
             <RecomendationForm updateList={setRecomendations}/>
             {recomendations && <RecomendationList recomendations = {recomendations}/>}
         </>
