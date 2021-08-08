@@ -3,7 +3,7 @@ import lorepicsum from '../../connections/lorepicsum';
 import quotesGen from '../../connections/quotesGen';
 
 
-export default ({toggle}) => {
+const MusicMoode = ({toggle}) => {
     const [image, setImage] = useState();
     const [frase, setFrase] = useState();
     const [redo, setRedo] = useState(false);
@@ -36,3 +36,5 @@ export default ({toggle}) => {
         </>
     )
 }
+
+export default MusicMoode;

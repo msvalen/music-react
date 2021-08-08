@@ -1,5 +1,5 @@
 import React,{ useState }  from 'react';
-import {RecomendationForm, RecomendationList,MusicMoode} from '../../components';
+import {RecomendationForm, RecomendationList, MusicMoode} from '../../components';
 
 export default () => { 
     const [recomendations,setRecomendations] =useState();
