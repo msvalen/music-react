@@ -1,13 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-//import './style.css';
+import './style.css';
 
 export default () => { 
     return (
-        <nav>
-            <NavLink exact to="/" activeClassName="current">Home</NavLink>
-            <NavLink to="/music" activeClassName="current">Music</NavLink>
-            <NavLink to="/other" activeClassName="current">Other</NavLink>
+        <nav className='routesNav'>
+            <NavLink activeClassName='current' exact to="/">Home</NavLink>
+            <NavLink activeClassName="current" to='/music'>Music</NavLink>
+            <NavLink activeClassName="current" to="/other">Other</NavLink>
         </nav>
     );
 }

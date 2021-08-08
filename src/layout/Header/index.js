@@ -1,4 +1,13 @@
 import React from 'react';
-//import styles from './style.css';
+import ThemeChanger from '../../components/ThemeChanger';
+import styles from './style.css';
 
-export default () => {return <h1 className='header'>Personal Playlist</h1>}
+export default () => {
+    return (
+
+        <div className='header'> 
+            <h1>Personal Playlist</h1>
+            <ThemeChanger/>
+        </div>
+    )
+}
