@@ -1,4 +1,5 @@
 import React,{ useState }  from 'react';
+import style from './style.css';
 
 import { Header, Nav, Footer } from './layout';
 import { Home, Music, Other, Error} from './pages'
@@ -14,7 +15,6 @@ import ThemeChanger from './components/ThemeChanger';
 
 function App() {
   const theme = useTheme();
-  
   return (
     <main className={theme.current.color}>
       <ThemeChanger/>

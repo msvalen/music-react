@@ -1,0 +1,16 @@
+.dark{
+    --main-text-clr:white;
+    --main-bg-clr:black;
+}
+.light{
+    --main-text-clr:black;
+    --main-bg-clr:white;
+}
+.sepia{
+    --main-text-clr:black;
+    --main-bg-clr:brown;
+}
+.nyan{
+    --main-text-clr:blue;
+    --main-bg-clr:pink;
+}

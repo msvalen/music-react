@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useTheme } from '../../contexts/Theme';
+import style from './style.css'
 
 const ThemeChanger = () => {
     const theme = useTheme();
@@ -17,14 +18,15 @@ const ThemeChanger = () => {
     }
 
     return (
-        <>
-         <span id="hide" onClick={()=>setHide(!hide)}><i className={"fas "+theme.current.icon}></i></span>
-         {hide && 
-            <>
-               {renderThemeNav(theme.list)}
-            </>
-         }
-        </>
+        <div className='themeChanger'>
+            <span id="hide" onClick={()=>setHide(!hide)}><i className={"fas "+theme.current.icon}></i></span>
+            <br></br>
+            {hide && 
+                <div className = 'menu'>
+                    {renderThemeNav(theme.list)}
+                </div>
+            }
+        </div>
     )
 }
 export default ThemeChanger;

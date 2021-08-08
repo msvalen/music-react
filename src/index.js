@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import styles from './css/style.css';
+import styles from './style.css';
 
 import { ThemeProvider } from "./contexts/Theme";
 
